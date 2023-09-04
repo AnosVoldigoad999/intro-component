@@ -34,7 +34,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [https://www.frontendmentor.io/solutions/intro-component-with-sign-up-form-solution-SEzbENnTjr](https://www.frontendmentor.io/solutions/intro-component-with-sign-up-form-solution-SEzbENnTjr)
 - Live Site URL: [https://intro-component-sable.vercel.app/](https://intro-component-sable.vercel.app/)
 
 ## My process
