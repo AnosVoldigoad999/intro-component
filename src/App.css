@@ -21,15 +21,18 @@ body{
 main{
   margin-top: 10vh;
   width: 90vw;
+  min-width: 674px;
   height: 80vh;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  align-items: start ;
   justify-content: space-evenly;
+  min-height: 635px;
 }
 
 .everything{
   width: 30%;
+  min-width: 364px;
   height: 60%;
   display: flex;
   flex-direction: column;
@@ -52,6 +55,7 @@ span{
   display: flex;
   flex-direction: column;
   width: 40%;
+  min-width: 305px;
   height: 80%;
 }
 
@@ -70,6 +74,7 @@ form{
   padding: 10px;
   text-align: center;
   width: 80%;
+  /*min-width: 330px;*/
   border-radius: 5px;
   color: white;
 }
