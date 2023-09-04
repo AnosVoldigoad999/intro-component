@@ -184,6 +184,14 @@ h1{
   max-width: 650px;
 }
 
+button:active{
+  background-color: hsl(154, 59%, 70%);
+}
+
+button:hover{
+  background-color: hsl(154, 59%, 51%);
+}
+
 }
 
 /*mobile*/
