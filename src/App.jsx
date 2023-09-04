@@ -85,13 +85,13 @@ export default function App (){
     <div className='container'>
       <p className='top'><strong>Try it free 7 days</strong> then $20/mo. thereafter</p>
       <form onSubmit={handleSubmit}>
-        <input placeholder='First Name' className={redfirst} value={first} onChange={e=>setFirst(e.target.value)} /> <img  className={firstimg}/>
+        <input placeholder='First Name' className={redfirst} value={first} onChange={e=>setFirst(e.target.value)} /> <img  className={firstimg} alt='icon'/>
         <span>{firstSpan}</span>
-        <input placeholder='Last Name'  className={redlast} value={last}  onChange={e=>setLast(e.target.value)}/><img  className={lastimg}/>
+        <input placeholder='Last Name'  className={redlast} value={last}  onChange={e=>setLast(e.target.value)}/><img  className={lastimg} alt='icon'/>
         <span>{lastSpan}</span>
-        <input className={inputclass} placeholder='Email Address' value={email} type='text'  onChange={e=>setEmail(e.target.value)} /><img  className={emailimg}/>
+        <input className={inputclass} placeholder='Email Address' value={email} type='text'  onChange={e=>setEmail(e.target.value)} /><img  className={emailimg} alt='icon' />
         <span>{emailSpan}</span>
-        <input placeholder='Password' type='password'  className={redpass} value={pass} onChange={e=>setPass(e.target.value)} /><img  className={passimg}/>
+        <input placeholder='Password' type='password'  className={redpass} value={pass} onChange={e=>setPass(e.target.value)} /><img  className={passimg} alt='icon' />
         <span>{passSpan}</span>
         <button>CLAIM YOUR FREE TRIAL</button>
         <p className='bottom'>By clicking the button, you are agreeing to our <a href='#'>Terms and services</a></p>
