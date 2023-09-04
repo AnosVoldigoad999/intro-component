@@ -15,22 +15,33 @@ export default function App (){
   const [lastSpan, setLastSpan] = useState('')
   const [emailSpan, setEmailSpan] = useState('')
   const [passSpan, setPassSpan] = useState('')
+  /*error*/
+  const [firstimg, setFirstImg] = useState('just')
+  const [lastimg, setLastImg] = useState('just')
+  const [emailimg, setEmailImg] = useState('just')
+  const [passimg, setPassImg] = useState('just')
+
   const pattern =  /^[^ ]+@[^ ]+\.[a-z]{2,3}$/
   const handleSubmit = (e) =>{
     e.preventDefault()
     if(first.length===0){
       setRedFirst('red')
       setFirstSpan('First Name cannot be empty')
+      setFirstImg('justerror')
     } else{
       setRedFirst('')
       setFirstSpan('')
+      setFirstImg('just')
     }
+
     if(last.length===0){
       setRedLast('red')
       setLastSpan('Last Name cannot be empty')
+      setLastImg('justerror')
     } else{
       setRedLast('')
       setLastSpan('')
+      setLastImg('just')
     }
 
 
@@ -38,20 +49,25 @@ export default function App (){
       /*console.log(true)*/
       setClass('red')
       setEmailSpan('Email cannot be empty')
+      setEmailImg('justerror')
     }else if(!email.match(pattern) ){
       setClass('red')
       setEmailSpan('Looks like this is not an email')
+      setEmailImg('justerror')
     } else{
       setClass('')
       setEmailSpan('Email cannot be empty')
+      setEmailImg('just')
     }
     
     if(pass.length===0){
       setRedPass('red')
       setPassSpan('Password cannot be empty')
+      setPassImg('justerror')
     } else{
       setRedPass('')
       setPassSpan('')
+      setPassImg('just')
     }
 
     
@@ -69,13 +85,13 @@ export default function App (){
     <div className='container'>
       <p className='top'><strong>Try it free 7 days</strong> then $20/mo. thereafter</p>
       <form onSubmit={handleSubmit}>
-        <input placeholder='First Name' className={redfirst} value={first} onChange={e=>setFirst(e.target.value)} />
+        <input placeholder='First Name' className={redfirst} value={first} onChange={e=>setFirst(e.target.value)} /> <img  className={firstimg}/>
         <span>{firstSpan}</span>
-        <input placeholder='Last Name'  className={redlast} value={last}  onChange={e=>setLast(e.target.value)}/>
+        <input placeholder='Last Name'  className={redlast} value={last}  onChange={e=>setLast(e.target.value)}/><img  className={lastimg}/>
         <span>{lastSpan}</span>
-        <input className={inputclass} placeholder='Email Address' value={email} type='text'  onChange={e=>setEmail(e.target.value)} />
+        <input className={inputclass} placeholder='Email Address' value={email} type='text'  onChange={e=>setEmail(e.target.value)} /><img  className={emailimg}/>
         <span>{emailSpan}</span>
-        <input placeholder='Password' type='password'  className={redpass} value={pass} onChange={e=>setPass(e.target.value)} />
+        <input placeholder='Password' type='password'  className={redpass} value={pass} onChange={e=>setPass(e.target.value)} /><img  className={passimg}/>
         <span>{passSpan}</span>
         <button>CLAIM YOUR FREE TRIAL</button>
         <p className='bottom'>By clicking the button, you are agreeing to our <a href='#'>Terms and services</a></p>
