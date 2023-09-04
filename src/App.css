@@ -16,28 +16,42 @@ body{
   flex-direction: column;
   font-family: pop;
   align-items: center;
+
+}
+
+body::-webkit-scrollbar{
+  display: none;
 }
 
 main{
+  margin: 0 auto;
   margin-top: 10vh;
+  margin-left: 10vw;
   width: 90vw;
   min-width: 674px;
   height: 80vh;
   display: flex;
-  flex-direction: row;
-  align-items: start ;
+  justify-content: center;
   justify-content: space-evenly;
+  flex-direction: row;
   min-height: 635px;
 }
 
 .everything{
+  margin-top: 5%;
   width: 30%;
   min-width: 364px;
-  height: 60%;
+  height: fit-content;
   display: flex;
   flex-direction: column;
-  justify-content: end;
+  align-items: center;
   color: white;
+}
+
+h1{
+  text-align: left;
+  max-width: 500px;
+  font-size: 2.5rem;
 }
 
 .red{
@@ -55,7 +69,7 @@ span{
   display: flex;
   flex-direction: column;
   width: 40%;
-  min-width: 305px;
+  min-width: 350px;
   height: 80%;
 }
 
@@ -69,12 +83,16 @@ form{
   border-radius: 15px;
 }
 
+.evertop{
+  max-width: 500px;
+  text-align: left;
+}
+
 .top{
   background-color: hsl(248, 32%, 49%);
   padding: 10px;
   text-align: center;
   width: 80%;
-  /*min-width: 330px;*/
   border-radius: 5px;
   color: white;
 }
@@ -124,3 +142,47 @@ button:hover{
 }
 
 /*active*/
+
+
+/*mobile*/
+
+@media (max-width:700px){
+  body{
+    overflow-x: hidden;
+  }
+main{
+  flex-direction: column;
+  margin: 0 auto;
+  align-items: center;
+  width: 100vw;
+  min-width: 0;
+  /*border: 1px solid red;*/
+  height: fit-content;
+}
+
+h1{
+  text-align: center;
+  font-size: 150%;
+  width: 80%;
+}
+.evertop{
+  text-align: center;
+  font-size: 100%;
+  width: 80%;
+}
+
+.everything{
+  margin-bottom: 50px;
+  min-width: 70%;
+}
+
+.container{
+  align-items: center;
+  min-width: 0;
+  width: 100%;
+  max-width: 650px;
+}
+
+}
+
+/*mobile*/
